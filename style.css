@@ -907,7 +907,7 @@ footer p {
   inset: 0;
   z-index: 1000;
   background: rgba(10, 8, 15, 0.92);
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   padding: 2rem;
