@@ -881,12 +881,12 @@ footer p {
 }
 
 .carrousel-slide {
-  display: none;
+  display: none !important;
   animation: fadeIn 0.4s ease;
 }
 
 .carrousel-slide.active {
-  display: flex;
+  display: flex !important;
 }
 
 @keyframes fadeIn {
