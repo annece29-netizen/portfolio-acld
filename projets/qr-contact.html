@@ -51,17 +51,17 @@
         J'avais un événement professionnel à venir et une frustration qui revenait à chaque fois : les cartes de visite papier. On en distribue, on en reçoit, et trois jours plus tard elles sont au fond d'un sac ou à la poubelle. Personne n'a le temps de les saisir manuellement dans ses contacts.
       </p>
       <p>
-        Les solutions existantes — Blinq, Linktree, HiHello — fonctionnent bien, mais elles ont toutes le même défaut : elles nécessitent un compte, parfois un abonnement, et vos données (et celles de vos contacts) partent sur leurs serveurs.
+        Les solutions existantes (Blinq, Linktree, HiHello) fonctionnent bien, mais elles ont toutes le même défaut : elles nécessitent un compte, parfois un abonnement, et vos données (et celles de vos contacts) partent sur leurs serveurs.
       </p>
       <p>
-        Je voulais quelque chose de gratuit, sans compte, qui marche directement dans le navigateur et qui génère un vrai vCard scannable — le format standard qui permet d'ajouter un contact directement dans les contacts du téléphone.
+        Je voulais quelque chose de gratuit, sans compte, qui marche directement dans le navigateur et qui génère un vrai vCard scannable : le format standard qui permet d'ajouter un contact directement dans les contacts du téléphone.
       </p>
     </div>
 
     <div class="etude-section">
       <h2>Comment je l'ai construit</h2>
       <p>
-        J'ai construit QR-Contact avec Claude, en une session de travail. L'application est un fichier HTML unique avec du JavaScript intégré — pas de serveur, pas de base de données, pas de dépendance externe sauf une librairie de génération de QR code.
+        J'ai construit QR-Contact avec Claude, en une session de travail. L'application est un fichier HTML unique avec du JavaScript intégré. Pas de serveur, pas de base de données, pas de dépendance externe sauf une librairie de génération de QR code.
       </p>
       <p>
         Le vrai défi technique était la photo. Un QR code a une capacité limitée en données. Intégrer une photo directement dans le QR code le rend illisible dès que la qualité est un peu élevée. J'ai résolu ce problème en gérant trois versions de la photo simultanément :
