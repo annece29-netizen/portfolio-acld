@@ -57,7 +57,7 @@
         <p class="hero-accroche">
           Je conçois des systèmes IA simples pour résoudre des problèmes opérationnels concrets.
         </p>
-        <span class="hero-sous-accroche">En cours d'apprentissage — comme tout le monde dans ce domaine.</span>
+        <span class="hero-sous-accroche">Je construis des outils qui tournent, j'accompagne des équipes qui avancent.</span>
         <div class="hero-cta">
           <a href="#projets" class="btn btn-primary">Voir mes projets</a>
           <a href="#contact" class="btn btn-outline">Me contacter</a>
@@ -157,51 +157,112 @@
     <div class="container">
       <span class="section-label">Études de cas</span>
       <h2 id="projets-titre">Projets</h2>
+
+      <!-- Filtres -->
+      <div class="projets-filtres" role="group" aria-label="Filtrer les projets">
+        <button class="filtre-btn active" data-filtre="tous">Tous</button>
+        <button class="filtre-btn" data-filtre="application">Applications</button>
+        <button class="filtre-btn" data-filtre="mission">Missions clients</button>
+        <button class="filtre-btn" data-filtre="automatisation">Automatisation</button>
+      </div>
+
       <div class="projets-grid">
 
-        <!-- Projet 1 : Inventaire Vocal -->
-        <a href="projets/inventaire-vocal.html" class="projet-card">
+        <!-- E-Koun -->
+        <a href="projets/livre-intergenerationnel.html" class="projet-card" data-categorie="automatisation">
+          <div class="projet-card-header">
+            <span class="projet-emoji">📖</span>
+            <span class="projet-fleche">↗</span>
+          </div>
+          <h3>E-Koun — Livre intergénérationnel</h3>
+          <p>Workflow n8n complet : formulaire → génération IA des textes → mise en page PDF → impression à la demande. Zéro intervention manuelle.</p>
+          <span class="tag-statut tag-en-cours">● En cours</span>
+        </a>
+
+        <!-- BabyTrack -->
+        <a href="https://baby-tracking.netlify.app" target="_blank" rel="noopener" class="projet-card" data-categorie="application">
+          <div class="projet-card-header">
+            <span class="projet-emoji">🍼</span>
+            <span class="projet-fleche">↗</span>
+          </div>
+          <h3>BabyTrack</h3>
+          <p>PWA mobile gratuite pour suivre l'alimentation, le sommeil et le tire-lait d'un nouveau-né. 100% privée, installable, export PDF mensuel.</p>
+          <span class="tag-statut tag-realise">● Réalisé</span>
+        </a>
+
+        <!-- Lirella -->
+        <div class="projet-card" data-categorie="application">
+          <div class="projet-card-header">
+            <span class="projet-emoji">📚</span>
+          </div>
+          <h3>Lirella</h3>
+          <p>Appli web pour cataloguer sa bibliothèque personnelle par étagère. Recherche ISBN via Google Books, ajout manuel des livres auto-édités.</p>
+          <span class="tag-statut tag-realise">● Réalisé</span>
+        </div>
+
+        <!-- QR-Contact -->
+        <a href="https://annece29-netizen.github.io/qr-contact/" target="_blank" rel="noopener" class="projet-card" data-categorie="application">
+          <div class="projet-card-header">
+            <span class="projet-emoji">🪪</span>
+            <span class="projet-fleche">↗</span>
+          </div>
+          <h3>QR-Contact</h3>
+          <p>Carte de visite numérique gratuite, sans compte ni abonnement. Un QR code scannable ajoute directement le contact dans le téléphone.</p>
+          <span class="tag-statut tag-realise">● Réalisé</span>
+        </a>
+
+        <!-- Inventaire Vocal -->
+        <a href="projets/inventaire-vocal.html" class="projet-card" data-categorie="automatisation">
           <div class="projet-card-header">
             <span class="projet-emoji">🎙️</span>
             <span class="projet-fleche">↗</span>
           </div>
           <h3>Inventaire Vocal</h3>
           <p>Dicter son inventaire sur Telegram, recevoir un export Google Sheets structuré en moins de 15 secondes.</p>
-          <span class="tag-statut tag-test">● En test réel</span>
-        </a>
-
-        <!-- Projet 2 : Assistants Communication -->
-        <a href="projets/assistants-communication.html" class="projet-card">
-          <div class="projet-card-header">
-            <span class="projet-emoji">💬</span>
-            <span class="projet-fleche">↗</span>
-          </div>
-          <h3>Assistants Communication</h3>
-          <p>GPT personnalisés pour une équipe com-market : posts LinkedIn, articles SEO, campagnes emailing.</p>
           <span class="tag-statut tag-realise">● Réalisé</span>
         </a>
 
-        <!-- Projet 3 : Automatisations n8n -->
-        <a href="projets/automatisations-n8n.html" class="projet-card">
+        <!-- Automatisations n8n -->
+        <a href="projets/automatisations-n8n.html" class="projet-card" data-categorie="automatisation">
           <div class="projet-card-header">
             <span class="projet-emoji">⚙️</span>
             <span class="projet-fleche">↗</span>
           </div>
           <h3>Automatisations n8n</h3>
-          <p>Conception de workflows d'automatisation : connexions API, traitement de données, logique conditionnelle.</p>
+          <p>Conception et déploiement de workflows : connexions API, traitement de données, logique conditionnelle.</p>
           <span class="tag-statut tag-competences">● Compétences acquises</span>
         </a>
 
-        <!-- Projet 4 : Livre intergénérationnel -->
-        <a href="projets/livre-intergenerationnel.html" class="projet-card">
+        <!-- Assistants Communication -->
+        <a href="projets/assistants-communication.html" class="projet-card" data-categorie="mission">
           <div class="projet-card-header">
-            <span class="projet-emoji">📖</span>
+            <span class="projet-emoji">💬</span>
             <span class="projet-fleche">↗</span>
           </div>
-          <h3>Livre Intergénérationnel</h3>
-          <p>Un projet qui transforme la mémoire orale en quelque chose de tangible et transmissible.</p>
-          <span class="tag-statut tag-en-cours">● En cours</span>
+          <h3>Assistants Communication</h3>
+          <p>GPT personnalisés pour une équipe com-marketing : posts LinkedIn, articles SEO, campagnes emailing.</p>
+          <span class="tag-statut tag-realise">● Réalisé</span>
         </a>
+
+        <!-- Mélanie Cornec -->
+        <div class="projet-card" data-categorie="mission">
+          <div class="projet-card-header">
+            <span class="projet-emoji">🏗️</span>
+          </div>
+          <h3>Audit IA — Assistante de gestion, secteur bâtiment</h3>
+          <p>Audit IA individuel : mise en place d'un assistant devis sur-mesure. Résultat : les devis qui prenaient un week-end entier se font en quelques minutes.</p>
+          <span class="tag-statut tag-realise">● Réalisé</span>
+        </div>
+
+        <!-- Collège de Châteauneuf -->
+        <div class="projet-card" data-categorie="mission">
+          <div class="projet-card-header">
+            <span class="projet-emoji">🎓</span>
+          </div>
+          <h3>Initiation IA — Collège de Châteauneuf</h3>
+          <p>3 séances d'initiation à l'IA générative pour des élèves de collège : comprendre les outils, les usages responsables, les premiers pas pratiques.</p>
+          <span class="tag-statut tag-realise">● Réalisé</span>
+        </div>
 
       </div>
     </div>
@@ -217,7 +278,21 @@
         <div class="avis-card">
           <div class="avis-etoiles" aria-label="5 étoiles">★★★★★</div>
           <blockquote>
-            "Anne-Cécile a complètement transformé notre manière de travailler grâce à l'IA. Elle a construit des GPT personnalisés pour industrialiser la rédaction de nos argumentaires, de nos emails complexes et de nos réponses aux appels d'offres. Résultat : nous gagnons un temps considérable tout en améliorant la qualité de nos contenus. Elle a aussi créé des présentations d'offre commerciale avec avatar IA, ce qui nous permet d'expliquer nos solutions de manière plus claire, plus professionnelle et beaucoup plus impactante. Grâce à elle, notre discours est enfin cohérent, précis et facile à déployer par toute l'équipe. Elle a véritablement fait passer notre communication commerciale à un niveau supérieur."
+            "Avant, mon mari passait des week-ends entiers à calculer et chiffrer ses devis poste par poste. Aujourd'hui, il n'a plus qu'à vérifier si les prix lui semblent corrects avant de valider. Ce qui m'a le plus surprise, c'est qu'on peut absolument tout faire, en sachant simplement rédiger un bon prompt."
+          </blockquote>
+          <div class="avis-auteur">
+            <div class="avis-avatar">M</div>
+            <div>
+              <strong>Mélanie</strong>
+              <span>Assistante de gestion indépendante, secteur bâtiment</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="avis-card">
+          <div class="avis-etoiles" aria-label="5 étoiles">★★★★★</div>
+          <blockquote>
+            "Anne-Cécile a construit des GPT personnalisés pour industrialiser la rédaction de nos argumentaires, emails complexes et réponses aux appels d'offres. Elle a véritablement fait passer notre communication commerciale à un niveau supérieur."
           </blockquote>
           <div class="avis-auteur">
             <div class="avis-avatar">F</div>
@@ -231,7 +306,7 @@
         <div class="avis-card">
           <div class="avis-etoiles" aria-label="5 étoiles">★★★★★</div>
           <blockquote>
-            "On cherchait à visualiser ce que pourrait devenir la plateforme Kyteos avant d'investir dans le développement complet. Anne-Cécile nous a créé un MVP avec un outil no-code. Le prototype créé a immédiatement matérialisé notre vision. On a reconnu notre futur outil dès la première navigation. Cela nous a permis d'aligner les équipes techniques et commerce, et d'affiner nos priorités de développement. Le réalisme du rendu, la fluidité de l'expérience, et même la présence de fonctionnalités auxquelles on n'avait pas encore pensé. Ce travail a fait gagner plusieurs mois à notre équipe. Un rendu professionnel, intuitif et visionnaire."
+            "Le prototype créé a immédiatement matérialisé notre vision. On a reconnu notre futur outil dès la première navigation. Ce travail a fait gagner plusieurs mois à notre équipe."
           </blockquote>
           <div class="avis-auteur">
             <div class="avis-avatar">B</div>
@@ -254,10 +329,13 @@
         <h2 id="moment-titre">Ce sur quoi je travaille</h2>
         <div class="divider"></div>
         <p>
-          Je finalise la version 4 de l'Inventaire Vocal, en test réel avec de premiers utilisateurs. L'objectif : valider que le système tient ses promesses en conditions réelles avant d'aller plus loin.
+          Je finalise E-Koun, un système complet de création de livres intergénérationnels : de l'enregistrement vocal du grand-parent jusqu'au livre imprimé, sans intervention manuelle. Le workflow tourne, le premier livre test est en cours.
         </p>
         <p>
-          En parallèle, j'écris sur Substack. La publication s'appelle <a href="https://annec266799.substack.com/" target="_blank" rel="noopener"><em>Itérations</em></a>. J'y raconte la construction de ces outils pendant qu'elle se passe, pas après.
+          En parallèle, je développe <strong>KléIA Solutions</strong>, mon activité de conseil et formation IA pour les PME et TPE. J'accompagne dirigeants et équipes du diagnostic à l'installation concrète des outils.
+        </p>
+        <p>
+          J'écris aussi sur Substack. La publication s'appelle <a href="https://annec266799.substack.com/" target="_blank" rel="noopener"><em>Itérations</em></a>. J'y raconte la construction de ces outils pendant qu'elle se passe, pas après.
         </p>
         <span class="caveat" style="display: block; margin-top: 0.5rem;">Construction publique.</span>
       </div>
@@ -311,5 +389,26 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Filtres projets
+    const filtresBtns = document.querySelectorAll('.filtre-btn');
+    const cartes = document.querySelectorAll('.projet-card');
+
+    filtresBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filtresBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filtre = btn.dataset.filtre;
+        cartes.forEach(carte => {
+          if (filtre === 'tous' || carte.dataset.categorie === filtre) {
+            carte.style.display = '';
+          } else {
+            carte.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
