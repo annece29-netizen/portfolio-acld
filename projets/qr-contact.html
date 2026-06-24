@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR-Contact — Anne-Cécile Le Dain</title>
+  <meta name="description" content="QR-Contact : carte de visite numérique gratuite construite avec Claude. Un QR code scannable ajoute directement le contact dans le téléphone." />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <nav aria-label="Navigation principale">
+    <a href="../index.html" class="nav-logo">Anne-Cécile <span>Le Dain</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="../index.html#a-propos">À propos</a></li>
+      <li><a href="../index.html#competences">Compétences</a></li>
+      <li><a href="../index.html#projets">Projets</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="container projet-page">
+
+    <a href="../index.html#projets" class="retour">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+      </svg>
+      Retour au portfolio
+    </a>
+
+    <div class="projet-hero">
+      <div class="projet-hero-meta">
+        <span class="tag-statut tag-realise">● Réalisé</span>
+        <span class="label">Claude · HTML · CSS · JavaScript · PWA · GitHub Pages</span>
+      </div>
+      <h1>QR-Contact</h1>
+      <p class="intro">
+        Une carte de visite numérique gratuite, sans compte ni abonnement. En quelques clics, on crée une carte personnalisée avec ses coordonnées et ses réseaux. Un QR code scannable ajoute directement le contact dans le téléphone de l'interlocuteur.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Le point de départ</h2>
+      <p>
+        J'avais un événement professionnel à venir et une frustration qui revenait à chaque fois : les cartes de visite papier. On en distribue, on en reçoit, et trois jours plus tard elles sont au fond d'un sac ou à la poubelle. Personne n'a le temps de les saisir manuellement dans ses contacts.
+      </p>
+      <p>
+        Les solutions existantes — Blinq, Linktree, HiHello — fonctionnent bien, mais elles ont toutes le même défaut : elles nécessitent un compte, parfois un abonnement, et vos données (et celles de vos contacts) partent sur leurs serveurs.
+      </p>
+      <p>
+        Je voulais quelque chose de gratuit, sans compte, qui marche directement dans le navigateur et qui génère un vrai vCard scannable — le format standard qui permet d'ajouter un contact directement dans les contacts du téléphone.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Comment je l'ai construit</h2>
+      <p>
+        J'ai construit QR-Contact avec Claude, en une session de travail. L'application est un fichier HTML unique avec du JavaScript intégré — pas de serveur, pas de base de données, pas de dépendance externe sauf une librairie de génération de QR code.
+      </p>
+      <p>
+        Le vrai défi technique était la photo. Un QR code a une capacité limitée en données. Intégrer une photo directement dans le QR code le rend illisible dès que la qualité est un peu élevée. J'ai résolu ce problème en gérant trois versions de la photo simultanément :
+      </p>
+      <ul style="color: var(--texte); margin: 1rem 0 1rem 1.5rem; line-height: 2;">
+        <li><strong>Version pleine qualité</strong> : pour la prévisualisation et le bouton "Ajouter à mes contacts"</li>
+        <li><strong>Version allégée</strong> : pour l'URL partageable (évite la troncature sur Safari)</li>
+        <li><strong>Version ultra-compressée</strong> : pour le QR code, si encore trop lourde, retirée automatiquement avec un message d'explication</li>
+      </ul>
+      <p>
+        L'application s'installe sur l'écran d'accueil du téléphone comme une vraie app (PWA), fonctionne hors connexion, et est hébergée gratuitement sur GitHub Pages.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Le résultat</h2>
+      <div class="chiffres-cles">
+        <div class="chiffre-item">
+          <span class="chiffre-valeur">5</span>
+          <span class="chiffre-label">étapes pour créer sa carte (identité, contact, réseaux, couleurs, QR)</span>
+        </div>
+        <div class="chiffre-item">
+          <span class="chiffre-valeur">0€</span>
+          <span class="chiffre-label">coût, sans compte, sans abonnement, sans publicité</span>
+        </div>
+        <div class="chiffre-item">
+          <span class="chiffre-valeur">1 scan</span>
+          <span class="chiffre-label">suffit pour ajouter le contact directement dans le téléphone</span>
+        </div>
+      </div>
+      <p style="margin-top: 1.5rem;">
+        L'application permet aussi de personnaliser les couleurs aux couleurs de sa charte graphique, d'ajouter des liens vers ses documents (plaquette, CV, brochure), et d'exporter sa carte au format JSON pour la réimporter plus tard.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Ce que ça illustre</h2>
+      <p>
+        QR-Contact est un bon exemple de ce qu'on peut construire rapidement avec l'IA sans être développeuse. Le besoin était précis, la solution existante ne convenait pas, et en une session de travail avec Claude l'application était fonctionnelle.
+      </p>
+      <p>
+        C'est aussi l'occasion de montrer concrètement comment je travaille avec Claude Code : pas juste "demander à l'IA", mais comprendre le problème technique, le décomposer, et itérer jusqu'à ce que ça fonctionne vraiment.
+      </p>
+    </div>
+
+    <div class="stack-section">
+      <h2>Stack technique</h2>
+      <div class="stack">
+        <span class="pill">HTML / CSS / JavaScript</span>
+        <span class="pill">PWA (Progressive Web App)</span>
+        <span class="pill">vCard 3.0</span>
+        <span class="pill">QR Code Generator</span>
+        <span class="pill">Claude Code (construction)</span>
+        <span class="pill">GitHub Pages (hébergement)</span>
+      </div>
+    </div>
+
+    <div class="retour-bas">
+      <a href="https://annece29-netizen.github.io/qr-contact/" target="_blank" rel="noopener" class="btn btn-primary">Voir l'application →</a>
+      <a href="../index.html#projets" class="btn btn-outline" style="margin-left: 1rem;">Retour au portfolio</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Anne-Cécile Le Dain — Fait avec curiosité et beaucoup d'itérations.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

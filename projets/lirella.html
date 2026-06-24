@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lirella — Anne-Cécile Le Dain</title>
+  <meta name="description" content="Lirella : application web pour cataloguer sa bibliothèque personnelle par étagère, avec gestion des livres auto-édités. Construite avec Claude." />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <nav aria-label="Navigation principale">
+    <a href="../index.html" class="nav-logo">Anne-Cécile <span>Le Dain</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="../index.html#a-propos">À propos</a></li>
+      <li><a href="../index.html#competences">Compétences</a></li>
+      <li><a href="../index.html#projets">Projets</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="container projet-page">
+
+    <a href="../index.html#projets" class="retour">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+      </svg>
+      Retour au portfolio
+    </a>
+
+    <div class="projet-hero">
+      <div class="projet-hero-meta">
+        <span class="tag-statut tag-realise">● Réalisé</span>
+        <span class="label">Claude · HTML · CSS · JavaScript · Google Books API</span>
+      </div>
+      <h1>Lirella</h1>
+      <p class="intro">
+        Une application web pour cataloguer sa bibliothèque personnelle exactement comme elle est rangée chez soi : par pièce, par étagère. Avec gestion des livres auto-édités que les applications classiques ignorent.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Le contexte</h2>
+      <p>
+        Marine est une lectrice passionnée. Elle possède des centaines de livres, dont beaucoup sont auto-édités — des romans de créateurs indépendants qu'elle suit depuis des années. Son problème : elle ne sait plus ce qu'elle a, ni où c'est rangé.
+      </p>
+      <p>
+        Les applications existantes comme Gleeph ou LibraryThing sont construites autour des grandes bases de données éditoriales. Elles ignorent les livres auto-édités, non référencés dans leurs catalogues. Et aucune ne permet d'organiser sa collection par emplacement physique réel — salon, chambre, bureau.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Ce que j'ai construit</h2>
+      <p>
+        Lirella est une application web mobile construite avec Claude. Elle permet de créer ses propres bibliothèques (Salon, Chambre, Bureau…) et ses étagères, puis d'y ajouter des livres de deux façons :
+      </p>
+      <p>
+        <strong>Par ISBN :</strong> on entre le code barre du livre, l'application récupère automatiquement le titre, l'auteur, la couverture et le résumé via l'API Google Books.
+      </p>
+      <p>
+        <strong>Manuellement :</strong> pour les livres auto-édités ou introuvables dans les bases de données, on entre les informations à la main et on ajoute une photo de la couverture.
+      </p>
+      <p>
+        Toutes les données sont sauvegardées localement sur l'appareil. Pas de compte, pas d'abonnement, pas de données envoyées sur un serveur.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Ce que ça m'a appris</h2>
+      <p>
+        Le vrai défi de Lirella n'était pas technique — c'était de bien comprendre le problème avant de construire. Une application généraliste de gestion de livres existait déjà. Ce qu'il fallait, c'était une application pensée pour quelqu'un qui a des livres auto-édités et qui veut retrouver physiquement ses livres dans sa maison.
+      </p>
+      <p>
+        Ce projet m'a aussi confirmé l'importance de l'interface sur mobile : une application qu'on utilise d'une main, debout devant une étagère, doit être pensée différemment d'une application de bureau.
+      </p>
+    </div>
+
+    <div class="stack-section">
+      <h2>Stack technique</h2>
+      <div class="stack">
+        <span class="pill">HTML / CSS / JavaScript</span>
+        <span class="pill">Google Books API</span>
+        <span class="pill">LocalStorage</span>
+        <span class="pill">Claude (construction)</span>
+        <span class="pill">Netlify (hébergement)</span>
+      </div>
+    </div>
+
+    <div class="retour-bas">
+      <a href="../index.html#projets" class="btn btn-outline">Retour au portfolio</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Anne-Cécile Le Dain — Fait avec curiosité et beaucoup d'itérations.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

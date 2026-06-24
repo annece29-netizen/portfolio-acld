@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BabyTrack — Anne-Cécile Le Dain</title>
+  <meta name="description" content="BabyTrack : application mobile gratuite pour suivre l'alimentation, le sommeil et le tire-lait d'un nouveau-né. Construite avec Claude." />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <nav aria-label="Navigation principale">
+    <a href="../index.html" class="nav-logo">Anne-Cécile <span>Le Dain</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="../index.html#a-propos">À propos</a></li>
+      <li><a href="../index.html#competences">Compétences</a></li>
+      <li><a href="../index.html#projets">Projets</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="container projet-page">
+
+    <a href="../index.html#projets" class="retour">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+      </svg>
+      Retour au portfolio
+    </a>
+
+    <div class="projet-hero">
+      <div class="projet-hero-meta">
+        <span class="tag-statut tag-realise">● Réalisé</span>
+        <span class="label">Claude · HTML · CSS · JavaScript · PWA</span>
+      </div>
+      <h1>BabyTrack</h1>
+      <p class="intro">
+        Une application mobile gratuite, sans compte et 100% privée, pour suivre le quotidien d'un nouveau-né : alimentation, sommeil et tire-lait. Construite en quelques heures avec Claude, installable sur iPhone et Android comme une vraie app.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Le contexte</h2>
+      <p>
+        Ma belle-fille attendait son premier enfant. Comme beaucoup de jeunes parents, elle cherchait un moyen simple de suivre les tétées, les biberons et les nuits de son bébé — notamment pour répondre aux questions du pédiatre lors des consultations.
+      </p>
+      <p>
+        Les applications existantes posent toutes le même problème : il faut créer un compte, accepter des conditions d'utilisation floues, et ses données personnelles (et celles de son bébé) se retrouvent sur des serveurs tiers. Certaines sont payantes, d'autres affichent des publicités.
+      </p>
+      <p>
+        Elle voulait quelque chose de simple, gratuit, et privé. Quelque chose qui reste sur son téléphone.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Ce que j'ai construit</h2>
+      <p>
+        J'ai construit BabyTrack avec Claude : une application web progressive (PWA) en HTML, CSS et JavaScript pur. Aucun serveur, aucune base de données externe. Toutes les données sont stockées localement sur l'appareil via le navigateur.
+      </p>
+      <p>
+        L'application s'installe sur l'écran d'accueil du téléphone comme une vraie app native, fonctionne hors connexion, et ne demande aucun compte.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Ce qu'elle permet de faire</h2>
+      <div class="chiffres-cles">
+        <div class="chiffre-item">
+          <span class="chiffre-valeur">🍼</span>
+          <span class="chiffre-label">Tétées avec chronomètre automatique gauche/droit</span>
+        </div>
+        <div class="chiffre-item">
+          <span class="chiffre-valeur">🥛</span>
+          <span class="chiffre-label">Biberons et tire-lait avec quantités en mL</span>
+        </div>
+        <div class="chiffre-item">
+          <span class="chiffre-valeur">🌙</span>
+          <span class="chiffre-label">Sommeil avec distinction nuit/jour automatique</span>
+        </div>
+        <div class="chiffre-item">
+          <span class="chiffre-valeur">📊</span>
+          <span class="chiffre-label">Statistiques et export PDF mensuel pour le pédiatre</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="etude-section">
+      <h2>Points forts</h2>
+      <p>
+        <strong>100% privée :</strong> rien n'est envoyé sur Internet. Toutes les données restent sur l'appareil. Pas de compte, pas d'email, pas de publicité, pas d'abonnement.
+      </p>
+      <p>
+        <strong>Installable :</strong> fonctionne comme une vraie application native sur iPhone et Android, directement depuis le navigateur.
+      </p>
+      <p>
+        <strong>Export PDF :</strong> un rapport mensuel complet (frise horaire + tableau détaillé) peut être généré et partagé avec le médecin en un clic.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Ce que ça m'a appris</h2>
+      <p>
+        Construire BabyTrack m'a confirmé quelque chose : une application utile n'a pas besoin d'être complexe. Pas de framework, pas de serveur, pas de base de données. Un fichier HTML, du JavaScript, et une personne qui sait exactement ce dont elle a besoin.
+      </p>
+      <p>
+        Le vrai travail était de comprendre les contraintes réelles : une maman qui allaite à 3h du matin ne veut pas chercher un bouton. L'interface doit être évidente même les yeux mi-clos.
+      </p>
+    </div>
+
+    <div class="stack-section">
+      <h2>Stack technique</h2>
+      <div class="stack">
+        <span class="pill">HTML / CSS / JavaScript</span>
+        <span class="pill">PWA (Progressive Web App)</span>
+        <span class="pill">LocalStorage</span>
+        <span class="pill">Claude (construction)</span>
+        <span class="pill">Netlify (hébergement)</span>
+      </div>
+    </div>
+
+    <div class="retour-bas">
+      <a href="https://baby-tracking.netlify.app" target="_blank" rel="noopener" class="btn btn-primary">Voir l'application →</a>
+      <a href="../index.html#projets" class="btn btn-outline" style="margin-left: 1rem;">Retour au portfolio</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Anne-Cécile Le Dain — Fait avec curiosité et beaucoup d'itérations.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
