@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volubil-IA — Anne-Cécile Le Dain</title>
+  <meta name="description" content="Volubil-IA : dictée vocale 100% locale pour Windows et Mac, inspirée de Wispr Flow. Transcription et nettoyage du texte sans envoyer aucune donnée vocale sur internet. Construite avec Claude." />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <nav aria-label="Navigation principale">
+    <a href="../index.html" class="nav-logo">Anne-Cécile <span>Le Dain</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="../index.html#a-propos">À propos</a></li>
+      <li><a href="../index.html#competences">Compétences</a></li>
+      <li><a href="../index.html#projets">Projets</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="container projet-page">
+
+    <a href="../index.html#projets" class="retour">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+      </svg>
+      Retour au portfolio
+    </a>
+
+    <div class="projet-hero">
+      <div class="projet-hero-meta">
+        <span class="tag-statut tag-realise">● Réalisé</span>
+        <span class="label">Claude Code · Electron · whisper.cpp · Ollama</span>
+      </div>
+      <h1>Volubil-IA</h1>
+      <p class="intro">
+        Une application qui transforme la voix en texte dans n'importe quelle application ouverte sur l'ordinateur : navigateur, traitement de texte, messagerie. Un raccourci démarre l'enregistrement, un second l'arrête, et le texte s'insère directement là où se trouve le curseur. Tout se passe sur la machine, sans clé API ni abonnement.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Le point de départ</h2>
+      <p>
+        L'inspiration vient de Wispr Flow, un outil de dictée vocale payant et fermé. L'idée : construire l'équivalent en gardant le contrôle total sur la confidentialité. Aucune donnée vocale envoyée sur internet, à une exception honnêtement documentée : le tout premier téléchargement du modèle de transcription, une seule fois.
+      </p>
+      <p>
+        Le codage a été entièrement délégué à un sous-agent piloté par une spécification détaillée, avec deux passes de relecture et de correction avant publication : une façon de tester jusqu'où une conception précise en amont peut porter un développement délégué, sans coder soi-même la moindre ligne.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Comment je l'ai construite</h2>
+      <p>
+        Volubil-IA tourne sur whisper.cpp, un moteur de transcription vocale open source qui fonctionne entièrement en local : pas de compte, pas de clé API, pas de coût récurrent. Le texte capté passe ensuite par un nettoyage automatique (suppression des hésitations, correction des espaces et de la majuscule de départ).
+      </p>
+      <p>
+        Un mode amélioré, optionnel, ajoute un second passage par un petit modèle de langage local via Ollama : ponctuation automatique, ponctuation dictée à voix haute ("virgule", "à la ligne"), gestion des corrections orales ("on se retrouve à 14h, en fait non, 15h"). Si Ollama n'est pas installé ou ne répond pas, l'application revient automatiquement au mode simple, sans jamais planter.
+      </p>
+      <p>
+        Un dictionnaire personnel corrige les noms propres ou mots inhabituels que Whisper déforme, avec une correction rapide possible juste après chaque dictée. Comme pour Avion Messager, les installateurs Windows et Mac sont fabriqués automatiquement par GitHub Actions à chaque version, whisper.cpp étant recompilé pour chaque plateforme.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Ce que ça m'a appris</h2>
+      <p>
+        Un bug remonté par un abonné a révélé une limite intéressante : whisper.cpp lit mal les chemins de fichiers contenant des caractères accentués sur Windows (un nom d'utilisateur comme "FrançoisHascoet" faisait planter l'application). Le correctif copie les fichiers concernés vers un dossier de secours neutre avant de les transmettre au moteur de transcription, sans rien changer pour les utilisateurs sans accent dans leur dossier.
+      </p>
+      <p>
+        Ce projet confirme aussi la valeur d'une vérification de sécurité systématique avant tout partage public : recherche de secrets dans le code et son historique, contrôle des adresses réseau réellement appelées, vérification que les dépendances embarquées (ici whisper-cli) sont bien compilées pour chaque plateforme et non bricolées après coup.
+      </p>
+      <p>
+        J'ai raconté la construction complète de Volubil-IA (et d'Avion Messager) dans un article Substack, avec les visuels et les vidéos du résultat : <a href="https://iterationsannececile.substack.com/p/decollage" target="_blank" rel="noopener"><em>Décollage.</em></a>
+      </p>
+    </div>
+
+    <div class="stack-section">
+      <h2>Stack technique</h2>
+      <div class="stack">
+        <span class="pill">Electron</span>
+        <span class="pill">whisper.cpp</span>
+        <span class="pill">Ollama (mode amélioré, optionnel)</span>
+        <span class="pill">GitHub Actions (build automatique)</span>
+        <span class="pill">Claude Code (construction)</span>
+      </div>
+    </div>
+
+    <div class="retour-bas">
+      <a href="https://github.com/annece29-netizen/Volubil-IA" target="_blank" rel="noopener" class="btn btn-primary">Voir le projet →</a>
+      <a href="https://iterationsannececile.substack.com/p/decollage" target="_blank" rel="noopener" class="btn btn-outline" style="margin-left: 1rem;">Lire l'article →</a>
+      <a href="../index.html#projets" class="btn btn-outline" style="margin-left: 1rem;">Retour au portfolio</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Anne-Cécile Le Dain — Fait avec curiosité et beaucoup d'itérations.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

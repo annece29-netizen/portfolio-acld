@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Avion Messager — Anne-Cécile Le Dain</title>
+  <meta name="description" content="Avion Messager : un avion traverse l'écran 5 minutes avant chaque réunion de l'agenda, sans jamais gêner le travail en cours. Construit avec Claude." />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <nav aria-label="Navigation principale">
+    <a href="../index.html" class="nav-logo">Anne-Cécile <span>Le Dain</span></a>
+    <ul class="nav-links" role="list">
+      <li><a href="../index.html#a-propos">À propos</a></li>
+      <li><a href="../index.html#competences">Compétences</a></li>
+      <li><a href="../index.html#projets">Projets</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="container projet-page">
+
+    <a href="../index.html#projets" class="retour">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+      </svg>
+      Retour au portfolio
+    </a>
+
+    <div class="projet-hero">
+      <div class="projet-hero-meta">
+        <span class="tag-statut tag-realise">● Réalisé</span>
+        <span class="label">Claude Code · Electron · JavaScript · GitHub Actions</span>
+      </div>
+      <h1>Avion Messager</h1>
+      <p class="intro">
+        Un petit avion traverse l'écran en tirant une banderole avec le rappel de la prochaine réunion, 5 minutes avant chaque événement de l'agenda. Il passe au-dessus de toutes les fenêtres et les clics passent au travers : impossible de rater une réunion, sans jamais gêner ce qu'on est en train de faire.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Le point de départ</h2>
+      <p>
+        L'idée est partie d'une vidéo Instagram montrant un avion en papier traversant l'écran avant chaque réunion, sur Mac, avec une connexion Google assez technique (Google Cloud Console, écran de consentement OAuth). Le matin, l'application n'existait pas. Le soir même, mes amis l'installaient en double-cliquant sur un fichier, sur Windows comme sur Mac.
+      </p>
+      <p>
+        Le vrai objectif n'était pas de construire un gadget : c'était de mesurer tout ce qu'il y a entre "ça marche chez moi" et "n'importe qui peut l'installer" : les installateurs, les avertissements de sécurité Windows et Mac, une fenêtre de réglages compréhensible sans notice, une documentation pour des gens qui ne sont pas techniciens.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Comment je l'ai construit</h2>
+      <p>
+        Avion Messager est construit avec Claude Code, en Electron : c'est le moyen le plus simple d'avoir une fenêtre transparente, au-dessus de toutes les autres, traversée par les clics, à l'identique sur Windows et sur Mac.
+      </p>
+      <p>
+        Plutôt que l'OAuth Google d'origine (compte développeur, projet Google Cloud, écran de consentement), l'application se connecte avec l'adresse secrète iCal que chaque agenda (Google, Outlook, iCloud) sait fournir en quelques clics. Un simple copier-coller dans la fenêtre de réglages, en lecture seule. La contrepartie assumée : Google et Outlook ne rafraîchissent ce flux qu'avec un léger délai, une réunion créée à la toute dernière minute peut échapper à l'avion.
+      </p>
+      <p>
+        Pour que des amis non techniques puissent l'installer, les installateurs Windows (.exe) et Mac (.dmg) sont fabriqués automatiquement par GitHub Actions à chaque nouvelle version. L'application n'étant pas signée commercialement (un certificat coûte plusieurs centaines d'euros par an, hors sujet pour un partage entre amis), les avertissements SmartScreen et Gatekeeper sont documentés pas à pas dans le README, jusqu'au clic exact à faire.
+      </p>
+    </div>
+
+    <div class="etude-section">
+      <h2>Ce que ça illustre</h2>
+      <p>
+        L'application elle-même ne consomme aucune IA une fois installée : aucun serveur, aucun modèle qui tourne, juste un petit programme local qui relit l'agenda une fois par minute, comme le fait déjà toute application de calendrier. L'IA n'a servi qu'une fois, le jour de la construction.
+      </p>
+      <p>
+        C'est un projet à faible enjeu, et c'est précisément ce qui en fait un bon terrain d'entraînement : on y traverse la vraie chaîne complète (code, tests, installateurs, sécurité, documentation grand public) sans risque client. Si c'est possible pour un gadget en une journée, c'est possible pour un vrai irritant métier en une mission.
+      </p>
+      <p>
+        J'ai raconté la construction complète d'Avion Messager (et de Volubil-IA) dans un article Substack, avec les visuels et les vidéos du résultat : <a href="https://iterationsannececile.substack.com/p/decollage" target="_blank" rel="noopener"><em>Décollage.</em></a>
+      </p>
+    </div>
+
+    <div class="stack-section">
+      <h2>Stack technique</h2>
+      <div class="stack">
+        <span class="pill">Electron</span>
+        <span class="pill">node-ical</span>
+        <span class="pill">GitHub Actions (build automatique)</span>
+        <span class="pill">Claude Code (construction)</span>
+      </div>
+    </div>
+
+    <div class="retour-bas">
+      <a href="https://github.com/annece29-netizen/avion-messager" target="_blank" rel="noopener" class="btn btn-primary">Voir le projet →</a>
+      <a href="https://iterationsannececile.substack.com/p/decollage" target="_blank" rel="noopener" class="btn btn-outline" style="margin-left: 1rem;">Lire l'article →</a>
+      <a href="../index.html#projets" class="btn btn-outline" style="margin-left: 1rem;">Retour au portfolio</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Anne-Cécile Le Dain — Fait avec curiosité et beaucoup d'itérations.</p>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

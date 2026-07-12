@@ -16,8 +16,12 @@ Pas une page de vente — un espace sobre pour montrer ses compétences et proje
 ## État actuel
 
 - En ligne sur GitHub Pages (branche `master`)
-- 4 projets présentés : Inventaire Vocal, Assistants ChatGPT, Automatisations n8n, Livre Intergénérationnel
+- **Refonte du 24/06 en ligne** : section projets avec filtres par catégorie, 5 nouveaux projets ajoutés, témoignage de Mélanie Cornec
+- **12/07 : 3 nouveaux projets ajoutés** (Avion Messager, Volubil-IA, Site KléIA Solutions), grille réordonnée par priorité (Site KléIA, E-Koun, Inventaire Vocal, Automatisations n8n, missions clients, puis toutes les applis), tous les emojis des cartes (projets + compétences) remplacés par des icônes SVG cohérentes avec la charte, badges de statut (Réalisé/En cours/Compétences acquises) passés du vert/orange à un style unique blanc/mauve foncé conforme à la charte, position fixée en bas à gauche des cartes. Détail complet : `01_Journal-projets/portfolio-acld/2026-07-12_ajout-projets-icones-badges.md`.
+- Le rôle "site formatrice IA" est repris par le **site KléIA séparé** (kleia-solutions.fr, projet `PROJECTS/formatrice-ia/site-kleia-v3/`) — le portfolio reste un portfolio personnel, avec toutefois une page dédiée qui présente ce site comme projet (`projets/site-kleia.html`)
 - SEO et GEO à améliorer (pas prioritaire pour l'instant)
+- **Idée en réserve :** un blog avec les articles-guides Substack (format "pas à pas" comme Personas., Déléguer., Vidéo.) — bien adaptés au SEO/GEO, ils attirent les prospects qui cherchent des méthodes concrètes
+- **Idée en réserve (12/07) :** lien discret vers ce portfolio depuis la page "À propos" du site KléIA, pour renforcer la crédibilité sans percer le tunnel de conversion commercial. Pas encore implémenté, noté dans `PROJECTS/formatrice-ia/CLAUDE.md`.
 
 ---
 
@@ -38,10 +42,18 @@ portfolio-acld/
 ├── style.css
 ├── script.js
 ├── projets/
+│   ├── site-kleia.html
+│   ├── livre-intergenerationnel.html
 │   ├── inventaire-vocal.html
-│   ├── assistants-communication.html
 │   ├── automatisations-n8n.html
-│   └── livre-intergenerationnel.html
+│   ├── audit-assistante-gestion.html
+│   ├── college-chateauneuf.html
+│   ├── babytrack.html
+│   ├── lirella.html
+│   ├── qr-contact.html
+│   ├── avion-messager.html
+│   ├── volubil-ia.html
+│   └── assistants-communication.html
 └── images/
     ├── anne-cecile-hero.jpg
     ├── anne-cecile-action.jpg

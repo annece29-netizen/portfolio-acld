@@ -22,7 +22,9 @@ Un site multi-pages :
 - 4 pages de projets détaillées dans le dossier `projets/`
 - Une page `maintenance.html` pour mettre le site en pause proprement
 
-### Les 4 projets présentés
+### Les projets présentés
+
+Depuis la refonte du 24/06, la grille compte plusieurs projets supplémentaires (Lirella, QR-Contact, Avion Messager, Volubil-IA, missions clients). Détail des 4 projets d'origine ci-dessous ; les pages ajoutées depuis suivent le même modèle (`projets/nom-du-projet.html`, copié sur `lirella.html` ou `qr-contact.html`).
 
 **1. Inventaire Vocal** (`projets/inventaire-vocal.html`)
 Un outil qui permet à un traiteur de dicter son inventaire à voix haute sur Telegram et de recevoir un export Google Sheets structuré avec les prix, en moins de 15 secondes. Construit avec n8n, l'API OpenAI et Google Sheets. Statut : en test réel. La page contient un mockup HTML animé du Google Sheets, avec des barres de confiance, des badges auto/révision/échec, et un panneau d'annotations — intégré depuis un fichier fourni par Claude Cowork, avec des classes CSS préfixées `mk-` pour éviter les conflits de style.

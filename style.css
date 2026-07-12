@@ -231,30 +231,24 @@ nav.scrolled {
   font-size: 0.78rem;
   font-weight: 500;
   letter-spacing: 0.02em;
+  background: var(--blanc);
+  color: var(--fond);
+  border: 1px solid var(--blanc);
 }
 
-.tag-realise {
-  background: rgba(74, 222, 128, 0.1);
-  color: #4ade80;
-  border: 1px solid rgba(74, 222, 128, 0.25);
-}
-
-.tag-test {
-  background: rgba(96, 165, 250, 0.1);
-  color: #60a5fa;
-  border: 1px solid rgba(96, 165, 250, 0.25);
-}
-
-.tag-en-cours {
-  background: rgba(251, 191, 36, 0.1);
-  color: #fbbf24;
-  border: 1px solid rgba(251, 191, 36, 0.25);
-}
-
+.tag-realise,
+.tag-test,
+.tag-en-cours,
 .tag-competences {
-  background: rgba(212, 204, 216, 0.1);
-  color: var(--texte-secondaire);
-  border: 1px solid rgba(212, 204, 216, 0.15);
+  background: var(--blanc);
+  color: var(--fond);
+  border: 1px solid var(--blanc);
+}
+
+.projet-card .tag-statut {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
 }
 
 /* --- SÉPARATEUR --- */
@@ -345,6 +339,18 @@ footer p {
   color: var(--blanc);
   text-align: center;
   letter-spacing: 0.01em;
+}
+
+.visuel-projet--petit {
+  max-width: 33%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.visuel-projet--moitie {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* --- PLACEHOLDER IMAGE --- */
@@ -549,6 +555,14 @@ footer p {
   display: block;
 }
 
+.skill-icone {
+  width: 32px;
+  height: 32px;
+  color: var(--rose);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
 .skill-card h3 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
@@ -610,6 +624,7 @@ footer p {
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: var(--rayon-card);
   padding: 2rem;
+  padding-bottom: 3.5rem;
   text-decoration: none;
   display: block;
   transition: all var(--transition);
@@ -649,6 +664,13 @@ footer p {
 
 .projet-emoji {
   font-size: 2rem;
+}
+
+.projet-icone {
+  width: 28px;
+  height: 28px;
+  color: var(--rose);
+  flex-shrink: 0;
 }
 
 .projet-fleche {
